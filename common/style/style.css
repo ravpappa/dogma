@@ -1,0 +1,82 @@
+body {
+    background-color: black; /* Le fond de la page sera noir */
+    color: white; /* Le texte de la page sera blanc */
+    font-family: 'Roboto', sans-serif;
+    word-wrap: normal;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.banniere {
+    padding: 100px; /* Vous ne connaissez pas encore cette propriété mais elle permet d'ajouter de l'espace dans notre élément*/
+    background: linear-gradient(90deg, #8360c3, #2ebf91);
+    border-radius: 10px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    font-style: bold ;
+}
+
+a:hover {
+    background-color: #BEAEE2;
+    color: white;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.conteneur {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 3px white solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.proposition {
+    grid-column: 1/1;
+    grid-row: 1/1;
+}
+
+.démonstrations {
+    grid-column: 3/3;
+    grid-row: 1/1;
+}
+
+.exemples {
+    grid-column: 1/1;
+    grid-row: 3/3;  
+}
+
+.outils {
+    grid-column: 3/3;
+    grid-row: 3/3;  
+}
+
+.contre-exemples {
+    grid-column: 5/5;
+    grid-row: 3/3;  
+}
+
+.exercices {
+    grid-column: 2/2;
+    grid-row: 5/5;  
+}
+
+.jeux {
+    grid-column: 4/4;
+    grid-row: 5/5;  
+}

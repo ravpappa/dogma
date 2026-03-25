@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Plan complexe – Dogma </title>
+        <link href="../../common/style/style.css" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../../source/smart.default.css" />
+        <link rel="stylesheet" type="text/css" href="../../../source/demos.css" /> 
+        <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+    </head>
+    <body>
+        <h1>Plan complexe</h1>
+        <div class="panel">
+            <h3>Fonction complexe :</h3>
+            <input type="text" name="function" id="function" placeholder="e.g. exp(i*z)"/>
+            <button id="btn-plot">Plot</button>
+            
+            <div class="container">
+                <div class="underlined"></div>
+                Elevation: <span id="sliderElevValue">45.00</span>
+                <smart-slider class="slider" id="sliderElev" show-tooltip orientation="horizontal" min="-180" max="180" value="45" scale-position="none"></smart-slider>    
+                <div class="underlined"></div>
+                Azimuth: <span id="sliderAzimValue">-90.00</span>
+                <smart-slider class="slider" id="sliderAzim" show-tooltip orientation="horizontal" min="-180" max="180" value="-90" scale-position="none"></smart-slider>
+                <div class="underlined"></div>
+                Roll: <span id="sliderRollValue">00.00</span>
+                <smart-slider class="slider" id="sliderRoll" show-tooltip orientation="horizontal" min="-180" max="180" value="0" scale-position="none"></smart-slider>
+            </div>
+
+            <div id="plot-output" class="output"></div>
+
+        <!-- scripts --> 
+        <script type="module" src="../../../source/smart.slider.js"></script> 
+        <script type="module" src="../../../source/index.js"></script>	 
+        <script type="py" src="./complex_plane.py" config="./pyscript.json"></script>       
+   </body>
+</html>
+
+<!-- Source : 
+ https://youtu.be/179xdJEeAS8?si=Y9rY1oIGFbW717WO
+ High rate frame:
+     - Displace by dragging
+     - Zoom by rolling or via sliding bar
+Or move in 2D and display in 3D (2 panels)
+-->
